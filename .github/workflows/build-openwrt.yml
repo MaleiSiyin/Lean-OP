@@ -73,12 +73,6 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-    
-    - name: 下载主题和软件包
-      run: |     
-        cd openwrt/package/lean
-        git clone https://github.com/openwrt-develop/luci-theme-atmaterial
-        git clone https://github.com/rosywrt/luci-theme-rosy
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a

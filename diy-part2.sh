@@ -18,8 +18,9 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 #删除部分软件包
 rm -rf package/lean/luci-theme-argon
 #下载其他软件包
-mkdir /package/sakura
-cd /package/sakura
+cd /lede/package
+mkdir /sakura
+cd /sakura
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
 git clone https://github.com/destan19/OpenAppFilter && mv -f OpenAppFilter/* ./
 git clone https://github.com/tty228/luci-app-serverchan
